@@ -76,17 +76,16 @@ int main() {
         char kategori;
         waitKey(1);
         kategori=outdir[i][location[0].length()+1];
-        cout << picture.ptr(1, 1);
+        //cout << picture.ptr(1, 1);
         for (int x = 0; x < picture.rows; x++)
             for (int y = 0; y < picture.cols; y++)
                 data_vec.push_back(picture.at<uchar>(x, y));
-        for(auto x:data_vec){
+        /*for(auto x:data_vec){
             cout << x << ' ';
-        }
+        }*/
         cout << "\n";
         data_vec.insert(data_vec.begin(),kategori-48);
         data.push_back(data_vec);
-
 
         i++;
         waitKey(1);
@@ -97,7 +96,7 @@ int main() {
         }
         cout << "\n";
     }*/
-    cout << "\nMatrix size: \n" << data.size() << " : " << data[0].size() << "\nSaved in data.data, in same dir as program";
+    cout << "\nMatrix size: \n" << data.size() << " : " << data[0].size() << "\nSaved as data.data, in same DIR as program";
 
     //Write to file
     ofstream myfile;
